@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- <base target="_top"> -->
+    <title>ページ3</title>
+  </head>
+  <body>
+    <h2>ページ3の内容</h2>
+    <p>これはページ3です。テキストを表示しています。</p>
+    <a href="?">TOPページに戻る</a>
+  </body>
+</html>
