@@ -16,3 +16,9 @@ ul li a {
 ul li a:hover {
   text-decoration: underline;
 }
+
+.original-gradient {
+  height: 200px;
+  width: 90%;
+  background-image: linear-gradient(150deg, rgba(215, 102, 93, 0.57) 20%, rgba(71, 243, 124, 0.57) 80%);
+}
