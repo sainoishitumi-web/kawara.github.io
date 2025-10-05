@@ -7,22 +7,9 @@
   <body>
     <h1>ようこそ！</h1>
     <ul>
-      <li><a id="page2">ページ2</a></li>
-      <li><a id="page3">ページ3</a></li>
-      <li><a id="page4">ページ4</a></li>
+      <li><a href="page2.html">ページ2</a></li>
+      <li><a href="page3.html">ページ3</a></li>
+      <li><a href="page4.html">ページ4</a></li>
     </ul>
-
-    <script>
-      // DOMが読み込まれたら実行
-      document.addEventListener("DOMContentLoaded", function() {
-        google.script.run
-          .withSuccessHandler(url => {
-            document.getElementById("page2").href = `${url}?page=page2`;
-            document.getElementById("page3").href = `${url}?page=page3`;
-            document.getElementById("page4").href = `${url}?page=page4`;
-          })
-          .getScriptUrl();
-      });
-    </script>
   </body>
 </html>
