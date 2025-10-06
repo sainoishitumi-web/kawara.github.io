@@ -1,19 +1,43 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>隣の芝生は枯れている</title>
-    <link rel="stylesheet" href="./index.css"> <!-- ✅ 修正 -->
-  </head>
-  <body class="original-gradient"> <!-- ✅ 修正 -->
-    <h1>隣の芝生は枯れている</h1>
-    <h6>2025.11.16</h6>
-    <h6>COMIC CITY SPARK Day2「緋糸を解く」</h6>
+body {
+  font-family: 'ＭＳ Ｐ明朝','MS PMincho',sans-serif;
+  background-color: #f5f5f5;
+  text-align: center;
+}
 
-    <ul>
-      <p><a href="page2.html">あとがき</a><p>
-      <p><a href="page3.html">感想フォーム</a><p>
-      <p><a href="page4.html">無配</a><p>
-    </ul>
-  </body>
-</html>
+h1 {
+  color: #2c3e50;
+  text-align: center;
+   margin: 20px; 
+}
+
+h6 {
+  color: #2c3e50;
+  text-align: center;
+  margin: 2px 0;       
+  line-height: 1.2;    
+}
+
+h3 {
+  color: #2c3e50;
+  text-align: center;
+}
+
+ul li a {
+  list-style: none;
+  text-align: center;
+  color: #3498db;
+  text-decoration: none;
+  list-style: none;  
+  margin: 2px;          /* ✅ 上下余白も調整したいとき */
+ 
+}
+
+ul li a:hover {
+  text-decoration: underline;
+}
+
+.original-gradient {
+  height: 800px;
+  width: 90%;
+  background-image: linear-gradient(150deg, rgba(215, 102, 93, 0.57) 20%, rgba(71, 243, 124, 0.57) 80%);
+}
