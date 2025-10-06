@@ -26,6 +26,9 @@ ul li a {
   text-align: center;
   color: #3498db;
   text-decoration: none;
+  list-style: none;  
+  margin: 2px;          /* ✅ 上下余白も調整したいとき */
+ 
 }
 
 ul li a:hover {
