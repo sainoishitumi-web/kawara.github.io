@@ -1,43 +1,58 @@
 body {
-  font-family: 'ＭＳ Ｐ明朝','MS PMincho',sans-serif;
-  background-color: #6464fd;
+  font-family: 'Hurricane','Zapfino',sans-serif;
+  background-color: #B2C6D3;
+  display: flex;
+  justify-content: center;   /* ✅ 横方向に中央寄せ */
+  align-items: center;       /* ✅ 縦方向に中央寄せ */
+  height: 100vh;             /* ✅ ビューポート全体の高さ */
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+
+
+/* 中央コンテンツを縦並びに */
+.center-container {
   text-align: center;
   display: flex;
-  justify-content: center; /* ← 横方向中央 */
-  align-items: center;     /* ← 縦方向中央 */
-  height: 100vh;           /* ← 画面全体の高さを確保 */
-  margin: 0;  
+  flex-direction: column;
+  gap: 0.5rem; /* 行間の余白（お好みで） */
 }
 
 h1 {
-  color: #2c3e50;
-  text-align: center;
-   margin: 20px; 
+  color: #ffffff;
+  margin: 0px; 
+  font-size: 40px;
 }
 
-h6 {
-  color: #2c3e50;
-  text-align: center;
-  margin: 2px 0;       
-  line-height: 1.2;    
+
+h4 {
+  color: #ffffff;
+  margin: 10px;
+  font-size: 15px;  
 }
 
-h3 {
-  color: #2c3e50;
-  text-align: center;
+/* リストの点を消す & 中央寄せ */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 ul li a {
-  list-style: none;
-  text-align: center;
   color: #3498db;
   text-decoration: none;
-  list-style: none;  
-  margin: 2px;          /* ✅ 上下余白も調整したいとき */
- 
+  font-size: 1.2rem;
 }
 
 ul li a:hover {
   text-decoration: underline;
 }
 
+.hurricane-regular {
+  font-family: "Hurricane", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
