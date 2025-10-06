@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>隣の芝生は枯れている</title>
+    <link rel="stylesheet" href="./index.css"> <!-- ✅ 修正 -->
+  </head>
+  <body class="original-gradient"> <!-- ✅ 修正 -->
+    <h1>隣の芝生は枯れている</h1>
+    <h6>2025.11.16</h6>
+    <h6>COMIC CITY SPARK Day2「緋糸を解く」</h6>
+
+    <ul>
+      <p><a href="page2.html">あとがき</a><p>
+      <p><a href="page3.html">感想フォーム</a><p>
+      <p><a href="page4.html">無配</a><p>
+    </ul>
+  </body>
+</html>
