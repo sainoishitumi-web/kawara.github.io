@@ -2,6 +2,11 @@ body {
   font-family: 'ＭＳ Ｐ明朝','MS PMincho',sans-serif;
   background-color: #f5f5f5;
   text-align: center;
+  display: flex;
+  justify-content: center; /* ← 横方向中央 */
+  align-items: center;     /* ← 縦方向中央 */
+  height: 100vh;           /* ← 画面全体の高さを確保 */
+  margin: 0;  
 }
 
 h1 {
