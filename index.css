@@ -58,10 +58,12 @@ ul li a:hover {
   border: 2px solid #ffffff;
   border-radius: 10px;
   padding: clamp(15px, 4vw, 30px);
-  margin-top: clamp(15px, 3vw, 30px);
+  margin: clamp(15px, 3vw, 30px) auto 0;  /* ✅ 中央寄せ */
   background: #B2C6D3;
   position: relative;
-   white-space: nowrap; 
+  max-width: 500px;
+  min-width: 320px;
+  box-sizing: border-box;
 }
 
 /* タイトルのラベル（ボックス上部に浮かせる） */
@@ -74,6 +76,7 @@ ul li a:hover {
   font-size: clamp(1rem, 2vw, 1.2rem);
   font-weight: bold;
   color: #ffffff;
+
 }
 
 .section-title::before,
