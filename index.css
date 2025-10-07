@@ -25,13 +25,9 @@ body {
 
 /* タイトル */
 h1 {
-  font-size: clamp(1.4rem, 4vw, 2.2rem);
-  line-height: 1.2;
-  margin: 0;
-  white-space: nowrap; /* ← 折り返し防止 */
-  overflow: hidden;    /* ← はみ出し対策（念のため） */
-  text-overflow: ellipsis;
   color: #ffffff;
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 3rem); /* 📱 1.8rem〜💻 3remまで自動調整 */
 }
 
 h4 {
@@ -65,6 +61,7 @@ ul li a:hover {
   margin-top: clamp(15px, 3vw, 30px);
   background: #B2C6D3;
   position: relative;
+   white-space: nowrap; 
 }
 
 /* タイトルのラベル（ボックス上部に浮かせる） */
@@ -124,6 +121,12 @@ ul li a:hover {
     padding: 20px;
   }
 
+  h1 {
+  color: #ffffff;
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 3rem); /* 📱 1.8rem〜💻 3remまで自動調整 */
+ }
+
   .center-container {
     width: 95%;
     gap: 1rem;
@@ -135,5 +138,13 @@ ul li a:hover {
 
   .section-title {
     left: 10px;
+  }
+
+  .comic-info {
+    font-size: 0.85rem; /* ✅ 小さめに調整 */
+  }
+
+  .title {
+    font-size: 1rem;
   }
 }
