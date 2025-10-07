@@ -1,75 +1,78 @@
+/* 🌐 基本設定：全デバイス共通 */
 body {
   font-family: 'ＭＳ 明朝',sans-serif;
   background-color: #B2C6D3;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;  /* ← 100vh → min-height に変更（スマホ対策） */
+  min-height: 100vh;
   margin: 0;
-  padding: 20px;      /* ← スマホで端が詰まらないように余白 */
+  padding: 0;
   text-align: center;
   box-sizing: border-box;
 }
 
+/* 中央コンテンツ */
 .center-container {
   text-align: center;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  width: 100%;
-  max-width: 500px; /* ← 横幅を制限して読みやすく */
+  max-width: 800px;
+  width: 90%;
+  margin: 0 auto;
 }
 
+/* タイトル */
 h1 {
-  font-family: 'Zapfino',sans-serif;
   color: #ffffff;
   margin: 0;
-  font-size: 40px;
+  font-size: clamp(1.8rem, 4vw, 3rem); /* 📱 1.8rem〜💻 3remまで自動調整 */
 }
 
 h4 {
   color: #ffffff;
-  margin: -10px;
-  font-size: 12px;
+  margin: 1px 0 0 0;
+  font-size: clamp(0.8rem, 1.8vw, 1.2rem);
 }
 
+/* リンクメニュー */
 ul {
   list-style: none;
   padding: 0;
-  margin: 40px;
+  margin: clamp(20px, 5vw, 40px);
 }
 
 ul li a {
   color: #089acf;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2vw, 1.4rem);
 }
 
 ul li a:hover {
   text-decoration: underline;
 }
 
+/* コンテンツボックス */
 .content-box {
   border: 2px solid #ffffff;
   border-radius: 10px;
-  padding: 20px;
-  margin-top: 20px;
+  padding: clamp(15px, 4vw, 30px);
+  margin-top: clamp(15px, 3vw, 30px);
   background: #B2C6D3;
   position: relative;
-  text-align: center;
-  box-sizing: border-box;
 }
 
+/* タイトルのラベル（ボックス上部に浮かせる） */
 .section-title {
   position: absolute;
-  top: -14px;
+  top: -0.8em;
   left: 20px;
   background: #B2C6D3;
   padding: 0 10px;
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
   font-weight: bold;
   color: #ffffff;
-  white-space: nowrap; /* ← 折り返し防止 */
 }
 
 .section-title::before,
@@ -84,61 +87,49 @@ ul li a:hover {
 
 .section-title::before {
   right: 100%;
-  margin-right: 0px;
 }
 
 .section-title::after {
   left: 100%;
-  margin-left: 5px;
 }
 
+/* 中のテキスト */
 .comic-info {
-  font-size: 13px;
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
   color: #ffffff;
   text-align: center;
   line-height: 1.6;
-  word-wrap: break-word; /* ← 長いテキストも折り返し */
 }
 
 .title {
-  font-size: 18px;
+  font-size: clamp(1rem, 2.2vw, 1.5rem);
   color: #ffffff;
   text-align: center;
-  margin-top: 8px;
+  margin-top: 0.8rem;
 }
 
 .hiito {
-  font-size: 13px;
+  font-size: inherit;
   color: #b7282e;
   font-weight: bold;
 }
 
-/* ✅ スマホ用レスポンシブ調整 */
-@media screen and (max-width: 480px) {
-  h1 {
-    font-size: 28px;
+/* 📱 スマホ向け微調整（幅600px以下） */
+@media (max-width: 600px) {
+  body {
+    padding: 20px;
   }
 
-  ul li a {
-    font-size: 1rem;
-  }
-
-  .section-title {
-    font-size: 1rem;
-    left: 10px;
-    top: -12px;
-  }
-
-  .comic-info,
-  .hiito {
-    font-size: 12px;
-  }
-
-  .title {
-    font-size: 16px;
+  .center-container {
+    width: 95%;
+    gap: 1rem;
   }
 
   .content-box {
     padding: 15px;
+  }
+
+  .section-title {
+    left: 10px;
   }
 }
