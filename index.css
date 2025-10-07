@@ -1,5 +1,5 @@
 body {
-  font-family: 'Hurricane','Zapfino',sans-serif;
+  font-family: 'ＭＳ 明朝','Zapfino',sans-serif;
   background-color: #B2C6D3;
   display: flex;
   justify-content: center;   /* ✅ 横方向に中央寄せ */
@@ -30,19 +30,20 @@ h1 {
 
 h4 {
   color: #ffffff;
-  margin: 10px;
-  font-size: 15px;  
+  margin: -10px;
+  font-size: 12px;  
 }
 
 /* リストの点を消す & 中央寄せ */
 ul {
+  
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 40px;  
 }
 
 ul li a {
-  color: #3498db;
+  color: #089acf;
   text-decoration: none;
   font-size: 1.2rem;
 }
@@ -51,8 +52,66 @@ ul li a:hover {
   text-decoration: underline;
 }
 
-.hurricane-regular {
-  font-family: "Hurricane", cursive;
-  font-weight: 400;
-  font-style: normal;
+h6 {
+  color: #ffffff;
+  margin: 0px;
+  font-size: 12px;  
+}
+
+.content-box {
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  background: #B2C6D3;
+  position: relative;
+}
+
+.section-title {
+  position: absolute;
+  top: -14px;
+  left: 20px;
+  background: #B2C6D3;       /* 背景色で下の線を隠す */
+  padding: 0 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.section-title::before,
+.section-title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 0px;             /* 長い線で左右に広げる */
+  height: 2px;
+  background: #ffffff;
+}
+
+.section-title::before {
+  right: 100%;               /* 左方向に伸ばす */
+  margin-right: 0px;
+}
+
+.section-title::after {
+  left: 100%;                /* 右方向に伸ばす */
+  margin-left: 5px;
+}
+
+.comic-info {
+  font-size: 13px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.title {
+  font-size: 18px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.hiito {
+  font-size: 13px;
+  color: #b7282e;
+  font-weight: bold;
 }
