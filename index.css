@@ -25,9 +25,13 @@ body {
 
 /* タイトル */
 h1 {
-  color: #ffffff;
+  font-size: clamp(1.4rem, 4vw, 2.2rem);
+  line-height: 1.2;
   margin: 0;
-  font-size: clamp(1.8rem, 4vw, 3rem); /* 📱 1.8rem〜💻 3remまで自動調整 */
+  white-space: nowrap; /* ← 折り返し防止 */
+  overflow: hidden;    /* ← はみ出し対策（念のため） */
+  text-overflow: ellipsis;
+  color: #ffffff;
 }
 
 h4 {
