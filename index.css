@@ -40,7 +40,7 @@ h4 {
 ul {
   list-style: none;
   padding: 0;
-  margin: clamp(20px, 5vw, 40px);
+  margin: clamp(100px, 5vw, 40px);
 }
 
 ul li a {
