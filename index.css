@@ -1,5 +1,5 @@
 body {
-  font-family: 'ＭＳ 明朝','Zapfino',sans-serif;
+  font-family: 'ＭＳ 明朝',sans-serif;
   background-color: #B2C6D3;
   display: flex;
   justify-content: center;
@@ -21,6 +21,7 @@ body {
 }
 
 h1 {
+  font-family: 'Zapfino',sans-serif;
   color: #ffffff;
   margin: 0;
   font-size: 40px;
