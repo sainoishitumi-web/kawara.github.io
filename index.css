@@ -66,6 +66,21 @@ ul li a:hover {
   box-sizing: border-box;
 }
 
+/* 共通の幅制御ラッパー */
+.content-wrapper {
+  max-width: 500px;
+  min-width: 320px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* h1 と content-box の幅を揃える */
+h1, .content-box {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
 /* タイトルのラベル（ボックス上部に浮かせる） */
 .section-title {
   position: absolute;
