@@ -1,3 +1,4 @@
+/* ===== 基本スタイル（PC向け） ===== */
 body {
   font-family: 'ＭＳ 明朝', serif;
   background-color: #B2C6D3;
@@ -8,27 +9,19 @@ body {
   color: #2c3e50;
 }
 
-
 h1 {
   margin: 10px 0 20px 0;
-  font-size: 2rem;
+  font-size: clamp(1.6rem, 2.8vw, 2.4rem);
 }
 
 h2 {
   margin: 30px 0 10px 0;
-  font-size: clamp(1.1rem, 2vw, 1.3rem);
-}
-
-h5 {
-  font-weight: normal;
-  line-height: 1.6;
-  max-width: 600px;
-  margin-top: 8px;
+  font-size: clamp(1.2rem, 2vw, 1.4rem);
 }
 
 h6 {
   margin: 2px 0;
-  font-size: 0.85rem;
+  font-size: clamp(0.7rem, 2vw, 0.9rem);
   opacity: 0.8;
 }
 
@@ -40,45 +33,67 @@ ul {
 
 ul li a {
   display: inline-block;
-  margin: 4px 0;
-  padding: 6px 14px;
+  margin: 6px 0;
+  padding: 6px 12px;
   border: 1px solid #3498db;
   border-radius: 4px;
   color: #3498db;
   text-decoration: none;
   transition: 0.2s;
+  font-size: clamp(0.9rem, 2vw, 1rem);
 }
 
 ul li a:hover {
   background: #3498db;
   color: white;
-  text-decoration: none;
 }
 
 /* あとがきスクロール枠 */
 #afterword-box {
-  width: 80%;
-  max-width: 640px;
-  height: 320px;               /* ボックスの高さ */
+  width: 90%;
+  max-width: 700px;
+  height: 50vh;              /* ← 画面に応じた高さ (スマホ対応) */
   padding: 18px 22px;
   margin-top: 10px;
   background: rgba(255,255,255,0.35);
   border: 1px solid rgba(44,62,80,0.2);
   border-radius: 6px;
-  overflow-y: auto;            /* ここがスクロール化 */
+  overflow-y: auto;
   line-height: 1.8;
-  font-size: 0.95rem;
-  white-space: pre-wrap;       /* 改行をそのまま表示 */
+  font-size: clamp(0.9rem, 1.6vw, 1.1rem);
+  white-space: pre-wrap;
   text-align: left;
   box-shadow: 0 2px 6px rgba(0,0,0,0.04);
 }
 
+/* Googleフォーム枠 */
 .form-box {
-  width: 90%;
-  max-width: 700px;
+  width: 95%;
+  max-width: 800px;
   margin-top: 30px;
-  border-radius: 6px;
+  border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
+/* iframe の幅をスマホに合わせる */
+iframe {
+  width: 100%;
+  min-height: 700px;
+  border: none;
+}
+
+/* ===== スマホ用（画面幅600px以下） ===== */
+@media (max-width: 600px) {
+  body {
+    padding: 16px;
+  }
+
+  #afterword-box {
+    height: 55vh;         /* スマホは少し縦に余裕 */
+    padding: 14px 18px;
+  }
+
+  iframe {
+    min-height: 850px;    /* スマホフォームは縦長になる */
+  }
+}
