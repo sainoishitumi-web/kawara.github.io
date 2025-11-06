@@ -1,0 +1,51 @@
+body {
+  font-family: 'ＭＳ 明朝',sans-serif;
+  background-color: #B2C6D3;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+
+
+h1 {
+  color: #2c3e50;
+   margin: 20px; 
+}
+
+h2 {
+  color: #2c3e50;
+   margin: 20px; 
+   font-size: clamp(1.0rem, 1.8vw, 1.2rem);
+}
+
+h6 {
+  color: #2c3e50;
+  text-align: center;
+  margin: 2px 0;       
+  line-height: 1.2;    
+}
+
+h3 {
+  color: #2c3e50;
+  text-align: center;
+}
+
+ul li a {
+  list-style: none;
+  text-align: center;
+  color: #3498db;
+  text-decoration: none;
+  list-style: none;  
+  margin: 2px;          /* ✅ 上下余白も調整したいとき */
+ 
+}
+
+ul li a:hover {
+  text-decoration: underline;
+}
+
