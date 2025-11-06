@@ -40,7 +40,7 @@ h4 {
 ul {
   list-style: none;
   padding: 0;
-  margin: clamp(100px, 5vw, 40px);
+  margin: clamp(60px, 5vw, 40px);
 }
 
 ul li a {
@@ -114,17 +114,27 @@ h1, .content-box {
 
 /* 中のテキスト */
 .comic-info {
-  font-size: clamp(0.9rem, 2vw, 1.2rem);
-  color: #ffffff;
+  font-size: clamp(0.8rem, 2vw, 1.2rem);
+  color: #b7282e;
   text-align: center;
   line-height: 1.6;
 }
 
 .title {
-  font-size: clamp(1rem, 2.2vw, 1.5rem);
-  color: #ffffff;
+  font-size: clamp(0.9rem, 2.2vw, 1.5rem);
+  color: #542729;
+  font-weight: bold;
   text-align: center;
   margin-top: 0.8rem;
+}
+
+.title2{
+  font-size: clamp(0.9rem, 2.2vw, 1.5rem);
+  color: #542729;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 0.8rem;
+  
 }
 
 .hiito {
@@ -145,6 +155,11 @@ h1, .content-box {
   font-size: clamp(1.8rem, 4vw, 3rem); /* 📱 1.8rem〜💻 3remまで自動調整 */
  }
 
+ 
+  h4 {
+    margin: 10px;
+  }
+
   .center-container {
     width: 95%;
     gap: 1rem;
@@ -156,10 +171,6 @@ h1, .content-box {
 
   .section-title {
     left: 10px;
-  }
-
-  h4 {
-    margin: 1px;
   }
 
   .comic-info {
