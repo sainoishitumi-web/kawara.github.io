@@ -1,17 +1,13 @@
 body {
   font-family: 'ＭＳ 明朝', serif;
   background-color: #B2C6D3;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
   margin: 0;
   padding: 20px;
   box-sizing: border-box;
   text-align: center;
   color: #2c3e50;
 }
+
 
 h1 {
   margin: 10px 0 20px 0;
