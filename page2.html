@@ -2,18 +2,40 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>隣の芝生は枯れている</title>
+    <title>TOPページ</title>
     <link rel="stylesheet" href="./page2.css"> <!-- ✅ 修正 -->
   </head>
-  <body class="original-gradient"> <!-- ✅ 修正 -->
-    <h1>隣の芝生は枯れている</h1>
+  <body class="original-gradient">
+
     <h6>2025.11.16</h6>
     <h6>COMIC CITY SPARK Day2「緋糸を解く」</h6>
 
     <ul>
-      <p><a href="page2.html">あとがき</a><p>
-      <p><a href="page3.html">感想フォーム</a><p>
-      <p><a href="page4.html">無配</a><p>
+      <p><a href="page3.html">無配</a>へ<p>
     </ul>
+
+    <h2>『隣の芝生は枯れている』　あとがき</h2>
+
+  <div id="afterword-box">読み込み中...</div>
+
+  <script>
+  fetch("text.txt")
+    .then(res => res.text())
+    .then(text => {
+      document.getElementById("afterword-box").innerText = text;
+    })
+    .catch(() => {
+      document.getElementById("afterword-box").innerText = "テキスト読み込みに失敗しました";
+    });
+  </script>
+
+  <h2>感想フォーム</h2>
+
+<div class="form-box">
+  <!-- ▼ここにGoogleフォームの埋め込みコードを貼る▼ -->
+  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdzN0F7BHlGRKnxggibr8RasIGG-Wm6GMdR8jDOPcuLQe5IFw/viewform?embedded=true" width="640" height="689" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+  <!-- ▲ここまで▲ -->
+</div>
+
   </body>
 </html>
