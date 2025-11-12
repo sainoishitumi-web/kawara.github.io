@@ -1,119 +1,96 @@
-/* ===== 基本スタイル（PC向け） ===== */
 body {
-  font-family: 'ＭＳ 明朝', serif;
-  background-color: #B2C6D3;
+  font-family: 'Helvetica Neue', 'ＭＳ 明朝', serif;
+  background-color: #f4f6f8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
   margin: 0;
-  padding: 20px;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  color: #2c3e50;
+  text-align: center;
+}
+.muhai-page { 
+  font-size: 20px!important;
+    max-width: 10;
+    margin-top: 1;
+
+}
+
+/* あとがきボックス */
+.afterword-box {
+  width: 100%;
+  max-width: 740px;
+  min-height: 300px;
+  padding: 18px 22px;
+  background: rgba(255,255,255,0.9);
+  border: 1px solid rgba(44,62,80,0.2);
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+  box-sizing: border-box;
+  text-align: left;     
+  font-size: 20px!important;      
+  line-height: 1.8;     /* ← note風の行間 */
+  white-space: pre-wrap; /* ← 改行を保持して表示 */
+  overflow-y: auto;      /* ← 長文ならスクロール */
+  margin-bottom: 40px;
+}
+
+/* 感想フォームボックス */
+.form-box {
+  width: 100%;
+  max-width: 740px;
+  padding: 18px 22px;
+  background: rgba(255,255,255,0.6);
+  border: 1px solid rgba(44,62,80,0.2);
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
   box-sizing: border-box;
   text-align: center;
-  color: #2c3e50;
-}
-
-h1 {
-  margin: 10px 0 20px 0;
-  font-size: clamp(1.6rem, 2.8vw, 2.4rem);
-}
-
-h2 {
-  margin: 30px 0 10px 0;
-  font-size: clamp(1.2rem, 2vw, 1.4rem);
 }
 
 h6 {
-  margin: 2px 0;
-  font-size: clamp(0.7rem, 2vw, 0.9rem);
-  opacity: 0.8;
-}
+    font-size: 0.8rem;
+    max-width: 10;
+    margin-top: 1;
+  }
 
-ul {
-  padding: 0;
-  margin: 15px 0;
-  list-style: none;
-}
+h2 {
+    font-size: 1.3rem;
+  }
 
-ul li a {
-  display: inline-block;
-  margin: 6px 0;
-  padding: 6px 12px;
-  border: 1px solid #3498db;
-  border-radius: 4px;
-  color: #3498db;
-  text-decoration: none;
-  transition: 0.2s;
-  font-size: clamp(0.9rem, 2vw, 1rem);
-}
-
-ul li a:hover {
-  background: #3498db;
-  color: white;
-}
-
-/* あとがきスクロール枠 */
-#afterword-box {
-  width: 90%;
-  max-width: 700px;
-  height: 50vh;              /* ← 画面に応じた高さ (スマホ対応) */
-  padding: 18px 22px;
-  margin-top: 10px;
-  background: rgba(255,255,255,0.35);
-  border: 1px solid rgba(44,62,80,0.2);
-  border-radius: 6px;
-  overflow-y: auto;
-  line-height: 1.8;
-  font-size: clamp(0.9rem, 1.6vw, 1.1rem);
-  white-space: pre-wrap;
-  text-align: left;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
-}
-
-/* Googleフォーム枠 */
-.form-box {
-  width: 95%;
-  max-width: 800px;
-  margin-top: 30px;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-/* iframe の幅をスマホに合わせる */
-iframe {
-  width: 100%;
-  min-height: 700px;
-  border: none;
-}
-
-
-
-/* スマホ用 — 幅600px以下のデバイスで適用 */
-@media (max-width: 600px) {
-
+/* --- スマホ用レスポンシブ調整 --- */
+@media (max-width: 680px) {
   body {
-    padding: 10px;
+    padding: 20px 12px;
+    font-size: 16px; /* 全体の文字を少し大きめに */
   }
 
-  .content-wrapper {
-    max-width: 100%;
-    padding: 0;
-  }
-
-  .card {
-    max-width: 100%;
+  .afterword-box,
+  .form-box {
+    max-width: 120%;
     padding: 16px;
-    margin: 0;
-    box-sizing: border-box;
+    font-size: 20px; /* スマホでも読みやすく */
+    background: rgba(255, 255, 255, 0.95); /* 背景を少し濃くして読みやすく */
   }
 
-  /* 読み込んだ text 部分 */
-  .text-box {
-    height: auto;        /* 固定高さをやめて内容に合わせる */
-    max-height: 70vh;    /* 画面の70%までスクロール可能 */
-    overflow-y: auto;
+  h2 {
+    font-size: 1.1rem;
   }
 
-  /* Google Forms iframe をスマホ幅いっぱいに */
+  h6 {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .muhai-page {
+    font-size: 18px !important;
+  }
+
   iframe {
-    width: 100% !important;
-    max-width: 100% !important;
-    height: 1200px; /* 長いフォームでもスクロールできるように */
+    width: 100%; /* フォームを画面幅にフィットさせる */
+    height: 600px; /* 高さは必要に応じて調整 */
   }
 }
