@@ -58,19 +58,32 @@ h2 {
   font-size: 1.3rem;
 }
 
-/* ▼▼▼ スマホ専用 ▼▼▼ */
+
 @media (max-width: 680px) {
-  .afterword-box {
-    width: 100%;             /* ← 画面幅いっぱい */
-    max-width: none;         /* ← 上の740px制限を解除 */
-    padding: 16px 12px;      /* ← 余白は少しだけ */
-    font-size: 26px !important;
-    line-height: 1.65;
-  }
 
   body {
-    padding: 0;              /* ← ボディの余白も消すと本当の全幅になる */
+    display: block;
+    padding: 0;
+    margin: 0 auto;        /* ← これが中央寄せの本命 */
+    text-align: center;     /* ← 子要素(p, h2, divなど)を中央寄せ */
+  }
+
+  .afterword-box {
+    width: 100%;
+    max-width: none;
+    padding: 20px 18px;
+    font-size: 18px !important;
+    line-height: 1.75;
+    margin: 0 auto;         /* ← afterword-box 自体も中央に */
+    border-radius: 0;
+    text-align: left;       /* ← 中の文章は左揃えのまま */
+  }
+
+  .form-box {
+    width: 100%;
+    max-width: none;
+    padding: 20px 18px;
+    margin: 0 auto;
+    border-radius: 0;
   }
 }
-
-/* ▲▲▲ スマホ専用ここまで ▲▲▲ */
