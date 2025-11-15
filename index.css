@@ -1,183 +1,108 @@
-/* 🌐 基本設定：全デバイス共通 */
+/* PC共通の設定 */
 body {
-  font-family: 'ＭＳ 明朝',sans-serif;
-  background-color: #B2C6D3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  box-sizing: border-box;
-}
-
-/* 中央コンテンツ */
-.center-container {
-  text-align: center;
+  font-family: 'Helvetica Neue', 'ＭＳ 明朝', serif;
+  background-color: #f4f6f8;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  max-width: 800px;
-  width: 90%;
-  margin: 0 auto;
-}
-
-/* タイトル */
-h1 {
-  color: #ffffff;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
   margin: 0;
-  font-size: clamp(1.8rem, 4vw, 3rem); /* 📱 1.8rem〜💻 3remまで自動調整 */
-}
-
-h4 {
-  color: #ffffff;
-  margin: 10px 0 0 0;
-  font-size: clamp(0.8rem, 1.8vw, 1.2rem);
-}
-
-/* リンクメニュー */
-ul {
-  list-style: none;
-  padding: 0;
-  margin: clamp(60px, 5vw, 40px);
-}
-
-ul li a {
-  color: #089acf;
-  text-decoration: none;
-  font-size: clamp(1rem, 2vw, 1.4rem);
-}
-
-ul li a:hover {
-  text-decoration: underline;
-}
-
-/* コンテンツボックス */
-.content-box {
-  border: 2px solid #ffffff;
-  border-radius: 10px;
-  padding: clamp(15px, 4vw, 30px);
-  margin: clamp(15px, 3vw, 30px) auto 0;  /* ✅ 中央寄せ */
-  background: #B2C6D3;
-  position: relative;
-  max-width: 500px;
-  min-width: 320px;
+  padding: 40px 20px;
   box-sizing: border-box;
+  color: #2c3e50;
+  text-align: center;
 }
 
-/* 共通の幅制御ラッパー */
-.content-wrapper {
-  max-width: 500px;
-  min-width: 320px;
-  width: 90%;
-  margin: 0 auto;
+.muhai-page { 
+  font-size: 20px!important;
 }
 
-/* h1 と content-box の幅を揃える */
-h1, .content-box {
+/* あとがきボックス（PC用） */
+.afterword-box {
   width: 100%;
+  max-width: 740px;
+  min-height: 300px;
+  padding: 18px 22px;
+  background: rgba(255,255,255,0.9);
+  border: 1px solid rgba(44,62,80,0.2);
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
   box-sizing: border-box;
-  margin: 0 auto;
+  text-align: left;     
+  font-size: 14px;
+  line-height: 1.8;
+  white-space: pre-wrap;
+  overflow-y: auto;
+  margin-bottom: 40px;
 }
 
-/* タイトルのラベル（ボックス上部に浮かせる） */
-.section-title {
-  position: absolute;
-  top: -0.8em;
-  left: 20px;
-  background: #B2C6D3;
-  padding: 0 10px;
-  font-size: clamp(1rem, 2vw, 1.2rem);
-  font-weight: bold;
-  color: #ffffff;
-
-}
-
-.section-title::before,
-.section-title::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  width: 0px;
-  height: 2px;
-  background: #ffffff;
-}
-
-.section-title::before {
-  right: 100%;
-}
-
-.section-title::after {
-  left: 100%;
-}
-
-/* 中のテキスト */
-.comic-info {
-  font-size: clamp(0.8rem, 2vw, 1.2rem);
-  color: #b7282e;
+/* フォームボックス（PC用） */
+.form-box {
+  width: 100%;
+  max-width: 740px;
+  padding: 18px 22px;
+  background: rgba(255,255,255,0.6);
+  border: 1px solid rgba(44,62,80,0.2);
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+  box-sizing: border-box;
   text-align: center;
-  line-height: 1.6;
+  /* border: 0; ←不要なら削除 */
 }
 
-.title {
-  font-size: clamp(0.9rem, 2.2vw, 1.5rem);
-  color: #542729;
-  font-weight: bold;
-  text-align: center;
-  margin-top: 0.8rem;
+.form-box iframe {
+  width: 100%;
+  height: 1000px; /* PC版でも高さ指定 */
+  border: 0;
 }
 
-.title2{
-  font-size: clamp(0.9rem, 2.2vw, 1.5rem);
-  color: #542729;
-  font-weight: bold;
-  text-align: center;
-  margin-top: 0.8rem;
-  
+h6 {
+  font-size: 0.8rem;
 }
 
-.hiito {
-  font-size: inherit;
-  color: #b7282e;
-  font-weight: bold;
+h2 {
+  font-size: 1.3rem;
 }
 
-/* 📱 スマホ向け微調整（幅600px以下） */
-@media (max-width: 600px) {
-  body {
-    padding: 20px;
-  }
+@media (max-width: 680px) {
 
-  h1 {
-  color: #ffffff;
+  body {font-family: 'Helvetica Neue', 'ＭＳ 明朝', serif;
+  background-color: #f4f6f8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
   margin: 0;
-  font-size: clamp(1.8rem, 4vw, 3rem); /* 📱 1.8rem〜💻 3remまで自動調整 */
- }
-
- 
-  h4 {
-    margin: 10px;
+  
+  box-sizing: border-box;
+  color: #2c3e50;
+  text-align: center;
   }
 
-  .center-container {
-    width: 95%;
-    gap: 1rem;
+  .afterword-box {
+    width: 100%;
+    max-width: none;
+    padding: 20px 18px;
+    font-size: 18px !important;
+    line-height: 1.75;
+    margin: 0; 
+    border-radius: 0;
+    text-align: left !important;   /* ← これも必須 */
   }
 
-  .content-box {
-    padding: 15px;
+  .form-box {
+    width: 100%;
+    max-width: none;
+    padding: 20px 18px;
+    margin: 0;
+    border-radius: 0;
   }
 
-  .section-title {
-    left: 10px;
-  }
-
-  .comic-info {
-    font-size: 0.85rem; /* ✅ 小さめに調整 */
-  }
-
-  .title {
-    font-size: 1rem;
+  .form-box iframe {
+    width: 100%;
+    height: 900px; /* ← スマホで確認して調整 */
+    border: 0;
   }
 }
