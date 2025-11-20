@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>感想</title>
+  <link rel="stylesheet" href="../index.css">
+</head>
+<body>
+
+<div class="page-container">
+
+  <div class="card">
+    <div class="card-header">
+      <span class="label received">メッセージ</span>
+      <span class="date">2025/11/20 11:50:20</span>
+    </div>
+    <div class="card-body received-body">読み込み中...</div>
+  </div>
+
+  <script>
+    fetch("o8dmfmeh8.txt")
+      .then(r => r.text())
+      .then(t => document.querySelector(".received-body").innerText = t)
+      .catch(()=> document.querySelector(".received-body").innerText = "読み込み失敗");
+  </script>
+
+</div>
+
+</body>
+</html>
