@@ -40,13 +40,13 @@
     <div class="card-body reply-body">返信準備中</div>
   </div>
 
-  <script>
-    fetch("text.txt")
-      .then(res => res.text())
-      .then(text => {
-        document.querySelector(".reply-body").innerText = text;
-      });
-  </script>
+ <script>
+  fetch("./o8dmfmeh8.txt")
+    .then(res => res.text())
+    .then(text => {
+      document.querySelector(".received-body").innerText = text;
+    });
+</script>
 
 </div>
 
