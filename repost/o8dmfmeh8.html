@@ -22,7 +22,7 @@
   </div>
 
   <script>
-    fetch(o8dmfmeh8.txt)
+    fetch("./o8dmfmeh8.txt")
       .then(res => res.text())
       .then(text => {
         document.querySelector(".received-body").innerText = text;
@@ -44,7 +44,7 @@
   fetch("o8dmfmeh8_repo.txt")
     .then(res => res.text())
     .then(text => {
-      document.querySelector(".received-body").innerText = text;
+      document.querySelector(".reply-body").innerText = text;
     });
 </script>
 
