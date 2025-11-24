@@ -63,7 +63,7 @@ body {
 .card-body p {
   line-height: 1.75;
   color: #444;
-  margin: 0 0 20px 0;  /* ← 読みやすく */
+  margin: 0 0 1px 0;
 }
 
 .card-body p:first-child {
