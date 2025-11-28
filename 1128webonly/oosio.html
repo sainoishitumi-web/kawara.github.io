@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>大汐</title>
+  <link rel="stylesheet" href="oosio.css">
+</head>
+<body>
+
+<div class="page-container">
+
+  <!-- ▼ 受信メッセージ -->
+  <div class="card">
+    <div class="card-header">
+      <span class="label received">笑っておくれよ、やあサージェント</span><br>
+      <span class="label-setumei">新刊でボツにした大汐です。単体でも読めます</span><br>
+      <button id="toggle-btn">縦書き / 横書き</button>
+    </div>
+
+    <div class="card-body received-body">読み込み中...</div>
+  </div>
+
+  
+  </div>
+
+</div>
+
+
+<script>
+  function formatLines(text, maxChars) {
+    const lines = text.split('\n');
+    let result = [];
+
+    lines.forEach(line => {
+      while (line.length > maxChars) {
+        result.push(line.slice(0, maxChars));
+        line = line.slice(maxChars);
+      }
+      result.push(line);
+    });
+
+    return result.join('\n');
+  }
+
+  fetch("oosio.txt")
+    .then(res => res.text())
+    .then(text => {
+      const formatted = formatLines(text);
+      document.querySelector(".received-body").innerText = formatted;
+    });
+
+  document.getElementById("toggle-btn").addEventListener("click", () => {
+    document.querySelector(".received-body").classList.toggle("tategaki");
+  });
+
+  const scrollContainer = document.querySelector(".received-body");
+
+  scrollContainer.addEventListener("wheel", (evt) => {
+    // 縦書きモード(.tategaki)の時だけ発動
+    if (scrollContainer.classList.contains("tategaki")) {
+      
+      evt.preventDefault(); // 画面全体の縦スクロールを止める
+
+      scrollContainer.scrollLeft -= evt.deltaY;
+    }
+  }, { passive: false });
+</script>
+
+
+<h6>賽の河原</h6>
+</body>
+</html>
