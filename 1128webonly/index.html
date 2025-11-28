@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TOPページ</title>
+  <link rel="stylesheet" href="o8dmfmeh.css">
+  
+  <style>
+    /* ポップアップの背景（黒く透ける部分） */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #f4f6f8; /* 背景の暗さ */
+      display: none; /* 最初は隠しておく */
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    /* ポップアップの白い箱 */
+    .modal-content {
+      background: #f4f6f8;
+      padding: 30px 20px;
+      width: 90%;
+      max-width: 400px;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      position: relative;
+    }
+
+    /* ポップアップが表示された時のクラス */
+    .modal-overlay.active {
+      display: flex; /* 表示する */
+    }
+
+    /* ポップアップ内のリンクボタン */
+    .modal-btn {
+      display: block;
+      width: 100%;
+      padding: 12px 0;
+      margin: 10px 0;
+      background: #5cb2abd3;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 18px;
+      transition: opacity 0.3s;
+    }
+    .modal-btn:hover {
+      opacity: 0.8;
+    }
+
+    /* 閉じるボタン */
+    .close-btn {
+      margin-top: 15px;
+      background: transparent;
+      border: 1px solid #999;
+      color: #555;
+      padding: 8px 20px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    
+    /* タイトル */
+    .modal-title {
+      margin-bottom: 20px;
+      font-size: 1.2rem;
+      color: #2c3e50;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="event-info">
+    <h6>2025.11.28-30<br>穢大典</h6>
+  </div>
+
+  <a href="https://x.com/kawara_155" class="round-link" target="_blank"></a>
+
+  <div class="afterword-box">
+    <p><a href="https://kawara-155.booth.pm/" target="_blank">通販</a></p>
+  </div>
+
+  <div class="afterword-box">
+    <p><a href="javascript:void(0)" id="open-modal">展示</a></p>
+  </div>
+  <div class="afterword-box">
+    <p><a href="https://forms.gle/X5XhDofKqaCdSYKz5" target="_blank">メッセージ</a></p>
+  </div>
+
+  <div class="credit">
+    <h6>賽の河原</h6>
+  </div>
+
+
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal-content">
+      <div class="modal-title"></div>
+      
+      <a href="kawara.github.io/1128webonly/oosio" target="_blank" class="modal-btn">大汐</a>
+      <a href="" target="_blank" class="modal-btn">準備中</a>
+     <a href="" target="_blank" class="modal-btn">準備中</a>
+
+      <button class="close-btn" id="close-modal">閉じる</button>
+    </div>
+  </div>
+  <script>
+    const openBtn = document.getElementById('open-modal');
+    const closeBtn = document.getElementById('close-modal');
+    const overlay = document.getElementById('modal-overlay');
+
+    // 「展示」ボタンを押したらポップアップを表示
+    openBtn.addEventListener('click', () => {
+      overlay.classList.add('active');
+    });
+
+    // 「閉じる」ボタンを押したら隠す
+    closeBtn.addEventListener('click', () => {
+      overlay.classList.remove('active');
+    });
+
+    // ポップアップの外側（黒い背景）をクリックしても閉じるようにする
+    overlay.addEventListener('click', (e) => {
+      if(e.target === overlay) {
+        overlay.classList.remove('active');
+      }
+    });
+  </script>
+
+</body>
+</html>
