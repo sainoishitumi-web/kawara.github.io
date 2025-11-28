@@ -1,0 +1,111 @@
+/* PC共通の設定 */
+body {
+  font-family:  'Noto Serif JP', serif;
+  background-color: #f4f6f8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  margin: 0;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.round-link {
+  display: block;
+  width: 120px;
+  height: 120px;
+  margin: 10px auto 40px auto;
+  border-radius: 50%;
+  background: #eee ;
+  border: 2px solid rgba(44,62,80,0.3);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: 0.25s ease;
+}
+
+/* ▼① 見出し強化（イベント情報） */
+.event-info {
+  font-size: 22px;
+  margin-top: 5px; 
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(0,0,0,0.15); /* ライン追加 */
+  width: 100%;
+  max-width: 340px;
+  text-align: center;
+}
+
+/* ▼③ ボタン強化（カードデザイン） */
+.afterword-box {
+  width: 100%;
+  max-width: 320px;
+  min-height: 50px;
+  background: rgba(255,255,255,0.97);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+
+  padding: 14px 18px;
+  margin: 15px;
+  font-size: 20px;
+  line-height: 1.8;
+  text-align: center;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+/* hoverで少し浮く（スマホにも優しい程度） */
+.afterword-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.10);
+}
+
+/* 最後のクレジット（ページ下部へ） */
+.credit {
+  margin-top: 80px;   /* 下へ移動 */
+  font-size: 1rem;
+  color: #666;
+}
+
+
+
+
+/* スマホ用 */
+@media (max-width: 680px) {
+  body {
+    padding: 20px 0;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  
+  .round-link {
+    width: 140px;
+    height: 140px;
+    margin-top: 20px;
+  }
+
+
+  .event-info {
+    margin-top: 20px;
+    font-size: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+
+  .afterword-box {
+    width: calc(100% - 40px);
+    max-width: 70;
+    padding: 18px 18px;
+    margin: 22px auto;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+
+  .credit {
+    margin-top: 70px;
+  }
+}
