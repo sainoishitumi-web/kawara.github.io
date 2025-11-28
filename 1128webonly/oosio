@@ -1,0 +1,151 @@
+
+body {
+  font-family: 'Helvetica Neue', 'ＭＳ 明朝', serif;
+  background-color: #8bc8db3d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  margin: 0;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.card {
+  width: 100%;
+  max-width: 900px;
+  min-height: 300px;
+  padding: 18px 22px;
+  background: #f4f6f8;
+  border-radius: 6px;
+  box-sizing: border-box;
+  text-align: left;
+  font-size: 22px;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column; 
+}
+
+
+.received-body {
+  white-space: pre-wrap; /* ← ここに移動 */
+  box-sizing: border-box;
+}
+
+.card-header {
+  text-align: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.label-setumei {
+  font-size: 17px;       /* 文字サイズを小さく (12px〜15pxあたりがおすすめ) */
+  color: #666;           /* 真っ黒ではなくグレーにして、補足っぽさを出す */
+  font-weight: normal;   /* もし親要素の影響で太字になっていたら、普通に戻す */
+  display: inline-block; 
+  margin-bottom: 10px;   /* 下のボタンとの間隔を少し調整 */
+}
+
+.label {
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #327bbb;
+  text-align: center;
+}
+
+.received { background: #f4f6f8; }
+
+.card-body {
+  padding: 5px 20px 20px 20px;
+}
+
+.card-body p {
+  line-height: 1.75;
+  color: #444;
+  margin: 0 0 1px 0;
+}
+
+.card-body p:first-child {
+  margin-top: 0 !important;
+}
+
+.received-body {
+  white-space: pre-wrap;
+  font-size: 16px;
+  line-height: 1.8;
+  padding: 20px;
+}
+/* --- CSS追記修正 --- */
+
+
+
+/* --- 縦書きモードの設定 --- */
+.received-body.tategaki {
+  writing-mode: vertical-rl; /* 縦書き（右から左へ） */
+  text-orientation: upright; /* 数字や英字を立たせる */
+  
+  /* ▼ 重要: 縦書き時は「高さ」が決まっていないと折り返しません */
+  height: 500px;             /* 好みの高さに指定してください */
+  overflow-x: auto;          /* 横スクロールを許可 */
+  overflow-y: hidden;        /* 縦スクロールは不要なので消す */
+  
+  /* 行間と配置の調整 */
+  line-height: 2;            /* 縦書きは行間広めが読みやすいです */
+  text-align: left;          /* 行頭（上）に揃える */
+  width: 100%;               /* 親要素の幅いっぱいに広げる */
+}
+
+/* 縦書き時のスクロールバーの見た目（任意：Mac風にするなど） */
+.received-body.tategaki::-webkit-scrollbar {
+  height: 8px;
+}
+.received-body.tategaki::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+
+/* ▼ スマホ表示（〜600px）用レイアウト */
+@media (max-width: 600px) {
+
+  body {
+    padding: 20px 10px;
+    font-size: 16px;    
+  }
+
+  .card {
+    font-size: 16px;    
+    line-height: 1.6;   
+    padding: 15px 15px;
+    margin-bottom: 25px;
+  }
+
+  .card-body {
+    padding: 0 10px 15px 10px;
+  }
+
+  .card-body p {
+    line-height: 1.6;       
+    margin: 0 0 2px 0;      
+    font-size: 16px;        
+  }
+
+  .card-header {
+    margin-bottom: 10px;
+  }
+
+  .label {
+    font-size: 17px;
+    padding: 3px 8px;
+  }
+
+  .date {
+    font-size: 0.75rem;
+  }
+}
