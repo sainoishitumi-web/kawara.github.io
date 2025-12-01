@@ -1,55 +1,55 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>感想 0001</title>
+  <title>メッセージ</title>
   <link rel="stylesheet" href="vnpnc2ho.css">
 </head>
 <body>
 
 <div class="page-container">
 
-
+  <!-- ▼ 受信メッセージ -->
   <div class="card">
     <div class="card-header">
       <span class="label received">メッセージ</span>
-      <span class="date">2025/08/22 18:24:53</span>
+      <span class="date">2025/11/23 17:18:26</span>
     </div>
 
     <div class="card-body received-body">読み込み中...</div>
   </div>
 
-  <script>
-    fetch(./vnpnc2ho.txt)
-      .then(res => res.text())
-      .then(text => {
-        document.querySelector(".received-body").innerText = text;
-      });
-  </script>
-
-
   <!-- ▼ あなたの返信 -->
   <div class="card reply-card">
     <div class="card-header">
-      <span class="label replied">返信したポスト</span>
-      <span class="date">2025/08/22 22:16:17</span>
+      <span class="label replied">返信</span>
+      <span class="date">2025/11/24 23:00:00</span>
     </div>
 
-    <div class="card-body reply-body">返信準備中</div>
+    <div class="card-body reply-body">返信準備中...
+    </div>
   </div>
-
-  <script>
-    fetch("./vnpnc2ho_repost.txt")
-      .then(res => res.text())
-      .then(text => {
-        document.querySelector(".reply-body").innerText = text;
-      });
-  </script>
 
 </div>
 
+<script>
+  fetch("./vnpnc2ho.txt")
+    .then(res => res.text())
+    .then(text => {
+      document.querySelector(".received-body").innerText = text;
+    });
+</script>
+
+<script>
+  fetch("./vnpnc2ho_repost.txt")
+    .then(res => res.text())
+    .then(text => {
+      document.querySelector(".received-body").innerText = text;
+    });
+</script>
+
+
+<h6>賽の河原</h6>
 </body>
 </html>
-
