@@ -22,7 +22,7 @@
   </div>
 
   <script>
-    fetch(vnpnc2ho.txt)
+    fetch(./vnpnc2ho.txt)
       .then(res => res.text())
       .then(text => {
         document.querySelector(".received-body").innerText = text;
@@ -41,7 +41,7 @@
   </div>
 
   <script>
-    fetch("text.txt")
+    fetch("./vnpnc2ho_repost.txt")
       .then(res => res.text())
       .then(text => {
         document.querySelector(".reply-body").innerText = text;
