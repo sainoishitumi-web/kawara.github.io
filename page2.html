@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>大汐</title>
-  <link rel="stylesheet" href="oosio.css">
+  <title>無配</title>
+  <link rel="stylesheet" href="page2.css">
 </head>
 <body>
 
@@ -13,8 +13,8 @@
   <!-- ▼ 受信メッセージ -->
   <div class="card">
     <div class="card-header">
-      <span class="label received">笑っておくれよ、やあサージェント</span><br>
-      <span class="label-setumei">新刊でボツにした大汐です。単体でも読めます</span><br>
+      <span class="label received">無配</span><br>
+      <span class="label-setumei">すずの駆け込み訴えです</span><br>
       <button id="toggle-btn">縦書き / 横書き</button>
     </div>
 
@@ -43,7 +43,7 @@
     return result.join('\n');
   }
 
-  fetch("oosio.txt")
+  fetch("page2.txt")
     .then(res => res.text())
     .then(text => {
       const formatted = formatLines(text);
